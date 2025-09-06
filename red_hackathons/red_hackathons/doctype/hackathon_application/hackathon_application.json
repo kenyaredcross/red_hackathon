@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "format:HDIC-{YY}-{####}",
  "creation": "2025-09-06 06:55:27.555830",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -13,8 +13,9 @@
   "column_break_glbo",
   "occupation",
   "affiliation",
+  "specify_affiliation",
   "university",
-  "specify_other",
+  "specify_university",
   "im_a_red_cross_volunteer",
   "section_break_gpqc",
   "team_members",
@@ -26,7 +27,8 @@
   "brief_description",
   "section_break_tbop",
   "video_link",
-  "write_up"
+  "write_up",
+  "i_accept_the_terms_and_conditions"
  ],
  "fields": [
   {
@@ -69,7 +71,7 @@
    "fieldname": "occupation",
    "fieldtype": "Select",
    "label": "Occupation",
-   "options": "\nStudent",
+   "options": "\nStudent\nRecent Graduate (> 2021)\nTech Enthusiast\nTech Professional (Employed/ Self Employed)\nThematic Area Expert (eg. Disaster Operations)\nOther",
    "reqd": 1
   },
   {
@@ -84,21 +86,16 @@
    "fieldname": "affiliation",
    "fieldtype": "Select",
    "label": "Affiliation",
-   "options": "\nEductional Institution\nOrganization\nCBO\nYouth Group\nGovernment"
+   "options": "\nUniversity/College\nOrganization\nCBO\nYouth Group\nGovernment",
+   "reqd": 1
   },
   {
    "default": "Taita Taveta University",
+   "depends_on": "eval:doc.affiliation == \"University/College\";",
    "fieldname": "university",
    "fieldtype": "Select",
    "label": "University/College/Vocational",
    "options": "\nAdventist University of Africa\nAfrica International University\nAfrica Nazarene University\nAga Khan University, Kenya\nAlupe University\nAmref International University\nChuka University\nDaystar University\nDedan Kimathi University of Technology\nEgerton University\nGarissa University\nGreat Lakes University of Kisumu\nGRETSA University\nInternational Leadership University (Kenya)\nIslamic University of Kenya\nJaramogi Oginga Odinga University of Science and Technology\nJomo Kenyatta University of Agriculture and Technology\nKabarak University\nKAG East University\nKaimosi Friends University\nKaratina University\nKCA University\nKenya Highlands University\nKenya Methodist University\nKenyatta University\nKibabii University\nKirinyaga University\nKiriri Women\u2019s University of Science and Technology\nKisii University\nLaikipia University\nLukenya University\nMaasai Mara University\nMachakos University\nManagement University of Africa\nMaseno University\nMasinde Muliro University of Science and Technology\nMeru University of Science and Technology\nMoi University\nMount Kenya University\nMultimedia University of Kenya\nMurang\u2019a University of Technology\nPan Africa Christian University\nPioneer International University\nPwani University\nRiara University\nRongo University\nScott Christian University\nSouth Eastern Kenya University\nSt. Paul\u2019s University\nStrathmore University\nTaita Taveta University\nTangaza University\nTechnical University of Kenya\nTechnical University of Mombasa\nTharaka University\nThe Catholic University of Eastern Africa\nThe Co-operative University of Kenya\nThe East African University\nThe Presbyterian University of East Africa\nTom Mboya University\nUmma University\nUnited States International University Africa\nUniversity of Eastern Africa, Baraton\nUniversity of Eldoret\nUniversity of Embu\nUniversity of Kabianga\nUniversity of Nairobi\nUzima University\nZetech University\nOther"
-  },
-  {
-   "depends_on": "eval:doc.university == \"Other\";",
-   "fieldname": "specify_other",
-   "fieldtype": "Data",
-   "label": "Specify Other",
-   "mandatory_depends_on": "eval:doc.university == \"Other\";"
   },
   {
    "fieldname": "column_break_glbo",
@@ -111,6 +108,7 @@
   {
    "fieldname": "name_of_solution",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Name of Solution",
    "reqd": 1
   },
@@ -119,6 +117,7 @@
    "fieldname": "brief_description",
    "fieldtype": "Small Text",
    "label": "Brief Description",
+   "max_height": "20 px",
    "reqd": 1
   },
   {
@@ -169,15 +168,40 @@
    "label": "Team Members",
    "mandatory_depends_on": "eval:doc.type_of_applicant == \"Group\";",
    "options": "Hackathon Team Members"
+  },
+  {
+   "depends_on": "eval:doc.affiliation != \"University/College\";",
+   "fieldname": "specify_affiliation",
+   "fieldtype": "Data",
+   "label": "Specify Affiliation",
+   "mandatory_depends_on": "eval:doc.affiliation != \"University/College\";"
+  },
+  {
+   "depends_on": "eval:doc.university == \"Other\";",
+   "fieldname": "specify_university",
+   "fieldtype": "Data",
+   "label": "Specify University/ College",
+   "mandatory_depends_on": "eval:doc.university == \"Other\";"
+  },
+  {
+   "default": "1",
+   "description": "Please ensure that you read and understand the Terms and Conditions",
+   "documentation_url": "https://redcross.or.ke",
+   "fieldname": "i_accept_the_terms_and_conditions",
+   "fieldtype": "Check",
+   "label": "I Accept the Terms and Conditions",
+   "read_only": 1,
+   "set_only_once": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-06 08:15:00.084343",
+ "modified": "2025-09-06 13:14:03.279908",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
- "name": "Hackathon Profile",
+ "name": "Hackathon Application",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -191,10 +215,34 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Hackathon Participant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Hackathon Judges",
+   "share": 1,
+   "write": 1
   }
  ],
  "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "name_of_solution",
+ "track_changes": 1
 }

@@ -9,34 +9,31 @@
   "full_name",
   "email",
   "phone",
-  "affiliation",
-  "is_red_cross_member_or_volunteer"
+  "county",
+  "is_red_cross_member_or_volunteer",
+  "profile"
  ],
  "fields": [
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Full Name"
+   "label": "Full Name",
+   "reqd": 1
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Email"
+   "label": "Email",
+   "reqd": 1
   },
   {
    "fieldname": "phone",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Phone"
-  },
-  {
-   "fieldname": "affiliation",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Affiliation",
-   "options": "\nLearning Institution\nGovernment"
+   "label": "Phone",
+   "reqd": 1
   },
   {
    "default": "0",
@@ -44,13 +41,27 @@
    "fieldtype": "Check",
    "in_list_view": 1,
    "label": "Is Red Cross Member or Volunteer?"
+  },
+  {
+   "fieldname": "county",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "County",
+   "options": "County",
+   "reqd": 1
+  },
+  {
+   "fieldname": "profile",
+   "fieldtype": "Link",
+   "label": "Profile",
+   "options": "Hackathon Application"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-09-06 07:49:28.842002",
+ "modified": "2025-09-06 11:49:17.852442",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Team Members",

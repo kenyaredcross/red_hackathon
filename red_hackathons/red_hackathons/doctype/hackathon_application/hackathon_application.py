@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class HackathonProfile(Document):
+class HackathonApplication(Document):
 	pass
