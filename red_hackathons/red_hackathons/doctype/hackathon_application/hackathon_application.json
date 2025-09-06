@@ -5,6 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "applicants_details_section",
   "type_of_applicant",
   "primary_applicant_name",
   "primary_applicant_phone",
@@ -103,7 +104,8 @@
   },
   {
    "fieldname": "section_break_hhzu",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Solution Details"
   },
   {
    "fieldname": "name_of_solution",
@@ -159,7 +161,8 @@
   },
   {
    "fieldname": "section_break_gpqc",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Team Member Details"
   },
   {
    "depends_on": "eval:doc.type_of_applicant == \"Group\";",
@@ -192,12 +195,17 @@
    "label": "I Accept the Terms and Conditions",
    "read_only": 1,
    "set_only_once": 1
+  },
+  {
+   "fieldname": "applicants_details_section",
+   "fieldtype": "Section Break",
+   "label": "Applicants Details"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-06 13:14:03.279908",
+ "modified": "2025-09-06 14:42:40.133624",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Application",
