@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-06 07:44:15.807677",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "email",
+  "phone",
+  "affiliation",
+  "is_red_cross_member_or_volunteer"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone"
+  },
+  {
+   "fieldname": "affiliation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Affiliation",
+   "options": "\nLearning Institution\nGovernment"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_red_cross_member_or_volunteer",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Red Cross Member or Volunteer?"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-06 07:49:28.842002",
+ "modified_by": "Administrator",
+ "module": "Red Hackathons",
+ "name": "Hackathon Team Members",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
