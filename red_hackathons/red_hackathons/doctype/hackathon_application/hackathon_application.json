@@ -29,7 +29,19 @@
   "section_break_tbop",
   "video_link",
   "write_up",
-  "i_accept_the_terms_and_conditions"
+  "i_accept_the_terms_and_conditions",
+  "section_break_sswc",
+  "status",
+  "column_break_trvt",
+  "round_one_total_score",
+  "round_2_score",
+  "final_round_total_score",
+  "round_one_scores_section",
+  "scores_round_one",
+  "section_break_esfb",
+  "scores_round_two",
+  "round_three_scores_section",
+  "scores_round_three"
  ],
  "fields": [
   {
@@ -94,7 +106,7 @@
    "default": "Taita Taveta University",
    "depends_on": "eval:doc.affiliation == \"University/College\";",
    "fieldname": "university",
-   "fieldtype": "Select",
+   "fieldtype": "Autocomplete",
    "label": "University/College/Vocational",
    "options": "\nAdventist University of Africa\nAfrica International University\nAfrica Nazarene University\nAga Khan University, Kenya\nAlupe University\nAmref International University\nChuka University\nDaystar University\nDedan Kimathi University of Technology\nEgerton University\nGarissa University\nGreat Lakes University of Kisumu\nGRETSA University\nInternational Leadership University (Kenya)\nIslamic University of Kenya\nJaramogi Oginga Odinga University of Science and Technology\nJomo Kenyatta University of Agriculture and Technology\nKabarak University\nKAG East University\nKaimosi Friends University\nKaratina University\nKCA University\nKenya Highlands University\nKenya Methodist University\nKenyatta University\nKibabii University\nKirinyaga University\nKiriri Women\u2019s University of Science and Technology\nKisii University\nLaikipia University\nLukenya University\nMaasai Mara University\nMachakos University\nManagement University of Africa\nMaseno University\nMasinde Muliro University of Science and Technology\nMeru University of Science and Technology\nMoi University\nMount Kenya University\nMultimedia University of Kenya\nMurang\u2019a University of Technology\nPan Africa Christian University\nPioneer International University\nPwani University\nRiara University\nRongo University\nScott Christian University\nSouth Eastern Kenya University\nSt. Paul\u2019s University\nStrathmore University\nTaita Taveta University\nTangaza University\nTechnical University of Kenya\nTechnical University of Mombasa\nTharaka University\nThe Catholic University of Eastern Africa\nThe Co-operative University of Kenya\nThe East African University\nThe Presbyterian University of East Africa\nTom Mboya University\nUmma University\nUnited States International University Africa\nUniversity of Eastern Africa, Baraton\nUniversity of Eldoret\nUniversity of Embu\nUniversity of Kabianga\nUniversity of Nairobi\nUzima University\nZetech University\nOther"
   },
@@ -200,12 +212,82 @@
    "fieldname": "applicants_details_section",
    "fieldtype": "Section Break",
    "label": "Applicants Details"
+  },
+  {
+   "fieldname": "section_break_sswc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "options": "Round 1\nRound 2\nFinalist\nEliminated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_trvt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.status != \"Final Round\";",
+   "fieldname": "round_one_total_score",
+   "fieldtype": "Int",
+   "label": "Round One Total Score",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.round_one_total_score != \"\";",
+   "fieldname": "round_2_score",
+   "fieldtype": "Int",
+   "label": "Round Two Total Score",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.round_two_total_score != \"\";",
+   "fieldname": "final_round_total_score",
+   "fieldtype": "Int",
+   "label": "Final Round Total Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "round_one_scores_section",
+   "fieldtype": "Section Break",
+   "label": "Round One Scores"
+  },
+  {
+   "fieldname": "scores_round_one",
+   "fieldtype": "Table",
+   "label": "Scores Round One",
+   "options": "Hackathon Round Entry"
+  },
+  {
+   "fieldname": "section_break_esfb",
+   "fieldtype": "Section Break",
+   "label": "Round Two Scores"
+  },
+  {
+   "fieldname": "scores_round_two",
+   "fieldtype": "Table",
+   "label": "Scores Round Two",
+   "options": "Hackathon Round Entry"
+  },
+  {
+   "fieldname": "round_three_scores_section",
+   "fieldtype": "Section Break",
+   "label": "Round Three Scores"
+  },
+  {
+   "fieldname": "scores_round_three",
+   "fieldtype": "Table",
+   "label": "Scores Round Three",
+   "options": "Hackathon Round Entry"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-06 14:42:40.133624",
+ "modified": "2025-09-07 20:53:23.984629",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Application",
@@ -243,8 +325,7 @@
    "read": 1,
    "report": 1,
    "role": "Hackathon Judges",
-   "share": 1,
-   "write": 1
+   "share": 1
   }
  ],
  "row_format": "Dynamic",
