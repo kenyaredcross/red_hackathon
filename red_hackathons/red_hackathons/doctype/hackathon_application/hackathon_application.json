@@ -106,7 +106,7 @@
    "default": "Taita Taveta University",
    "depends_on": "eval:doc.affiliation == \"University/College\";",
    "fieldname": "university",
-   "fieldtype": "Autocomplete",
+   "fieldtype": "Select",
    "label": "University/College/Vocational",
    "options": "\nAdventist University of Africa\nAfrica International University\nAfrica Nazarene University\nAga Khan University, Kenya\nAlupe University\nAmref International University\nChuka University\nDaystar University\nDedan Kimathi University of Technology\nEgerton University\nGarissa University\nGreat Lakes University of Kisumu\nGRETSA University\nInternational Leadership University (Kenya)\nIslamic University of Kenya\nJaramogi Oginga Odinga University of Science and Technology\nJomo Kenyatta University of Agriculture and Technology\nKabarak University\nKAG East University\nKaimosi Friends University\nKaratina University\nKCA University\nKenya Highlands University\nKenya Methodist University\nKenyatta University\nKibabii University\nKirinyaga University\nKiriri Women\u2019s University of Science and Technology\nKisii University\nLaikipia University\nLukenya University\nMaasai Mara University\nMachakos University\nManagement University of Africa\nMaseno University\nMasinde Muliro University of Science and Technology\nMeru University of Science and Technology\nMoi University\nMount Kenya University\nMultimedia University of Kenya\nMurang\u2019a University of Technology\nPan Africa Christian University\nPioneer International University\nPwani University\nRiara University\nRongo University\nScott Christian University\nSouth Eastern Kenya University\nSt. Paul\u2019s University\nStrathmore University\nTaita Taveta University\nTangaza University\nTechnical University of Kenya\nTechnical University of Mombasa\nTharaka University\nThe Catholic University of Eastern Africa\nThe Co-operative University of Kenya\nThe East African University\nThe Presbyterian University of East Africa\nTom Mboya University\nUmma University\nUnited States International University Africa\nUniversity of Eastern Africa, Baraton\nUniversity of Eldoret\nUniversity of Embu\nUniversity of Kabianga\nUniversity of Nairobi\nUzima University\nZetech University\nOther"
   },
@@ -288,7 +288,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-08 06:23:40.442377",
+ "modified": "2025-09-08 07:12:44.545978",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Application",
