@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "applicants_details_section",
+  "datetime",
   "type_of_applicant",
   "primary_applicant_name",
   "primary_applicant_phone",
@@ -32,6 +33,7 @@
   "i_accept_the_terms_and_conditions",
   "section_break_sswc",
   "status",
+  "remarks",
   "column_break_trvt",
   "round_one_total_score",
   "round_2_score",
@@ -50,6 +52,7 @@
    "in_list_view": 1,
    "label": "Type of Applicant",
    "options": "\nIndividual\nGroup",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -57,6 +60,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name of Primary Applicant",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -64,6 +68,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Primary Applicant Phone",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -71,6 +76,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Primary Applicant Email",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -78,6 +84,7 @@
    "fieldtype": "Link",
    "label": "County Located",
    "options": "County",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -85,6 +92,7 @@
    "fieldtype": "Select",
    "label": "Occupation",
    "options": "\nStudent\nRecent Graduate (> 2021)\nTech Enthusiast\nTech Professional (Employed/ Self Employed)\nThematic Area Expert (eg. Disaster Operations)\nOther",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -92,7 +100,8 @@
    "description": "This info is only meant to help us know the reach, but will not influence the decision of the Judges in anyway as the application is OPEN.",
    "fieldname": "im_a_red_cross_volunteer",
    "fieldtype": "Check",
-   "label": "I'm a Red Cross Volunteer"
+   "label": "I'm a Red Cross Volunteer",
+   "read_only": 1
   },
   {
    "description": "Are you or your group affiliated to any institution?",
@@ -100,6 +109,7 @@
    "fieldtype": "Select",
    "label": "Affiliation",
    "options": "\nUniversity/College\nOrganization\nCBO\nYouth Group\nGovernment",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -108,7 +118,8 @@
    "fieldname": "university",
    "fieldtype": "Select",
    "label": "University/College/Vocational",
-   "options": "\nAdventist University of Africa\nAfrica International University\nAfrica Nazarene University\nAga Khan University, Kenya\nAlupe University\nAmref International University\nChuka University\nDaystar University\nDedan Kimathi University of Technology\nEgerton University\nGarissa University\nGreat Lakes University of Kisumu\nGRETSA University\nInternational Leadership University (Kenya)\nIslamic University of Kenya\nJaramogi Oginga Odinga University of Science and Technology\nJomo Kenyatta University of Agriculture and Technology\nKabarak University\nKAG East University\nKaimosi Friends University\nKaratina University\nKCA University\nKenya Highlands University\nKenya Methodist University\nKenyatta University\nKibabii University\nKirinyaga University\nKiriri Women\u2019s University of Science and Technology\nKisii University\nLaikipia University\nLukenya University\nMaasai Mara University\nMachakos University\nManagement University of Africa\nMaseno University\nMasinde Muliro University of Science and Technology\nMeru University of Science and Technology\nMoi University\nMount Kenya University\nMultimedia University of Kenya\nMurang\u2019a University of Technology\nPan Africa Christian University\nPioneer International University\nPwani University\nRiara University\nRongo University\nScott Christian University\nSouth Eastern Kenya University\nSt. Paul\u2019s University\nStrathmore University\nTaita Taveta University\nTangaza University\nTechnical University of Kenya\nTechnical University of Mombasa\nTharaka University\nThe Catholic University of Eastern Africa\nThe Co-operative University of Kenya\nThe East African University\nThe Presbyterian University of East Africa\nTom Mboya University\nUmma University\nUnited States International University Africa\nUniversity of Eastern Africa, Baraton\nUniversity of Eldoret\nUniversity of Embu\nUniversity of Kabianga\nUniversity of Nairobi\nUzima University\nZetech University\nOther"
+   "options": "\nAdventist University of Africa\nAfrica International University\nAfrica Nazarene University\nAga Khan University, Kenya\nAlupe University\nAmref International University\nChuka University\nDaystar University\nDedan Kimathi University of Technology\nEgerton University\nGarissa University\nGreat Lakes University of Kisumu\nGRETSA University\nInternational Leadership University (Kenya)\nIslamic University of Kenya\nJaramogi Oginga Odinga University of Science and Technology\nJomo Kenyatta University of Agriculture and Technology\nKabarak University\nKAG East University\nKaimosi Friends University\nKaratina University\nKCA University\nKenya Highlands University\nKenya Methodist University\nKenyatta University\nKibabii University\nKirinyaga University\nKiriri Women\u2019s University of Science and Technology\nKisii University\nLaikipia University\nLukenya University\nMaasai Mara University\nMachakos University\nManagement University of Africa\nMaseno University\nMasinde Muliro University of Science and Technology\nMeru University of Science and Technology\nMoi University\nMount Kenya University\nMultimedia University of Kenya\nMurang\u2019a University of Technology\nPan Africa Christian University\nPioneer International University\nPwani University\nRiara University\nRongo University\nScott Christian University\nSouth Eastern Kenya University\nSt. Paul\u2019s University\nStrathmore University\nTaita Taveta University\nTangaza University\nTechnical University of Kenya\nTechnical University of Mombasa\nTharaka University\nThe Catholic University of Eastern Africa\nThe Co-operative University of Kenya\nThe East African University\nThe Presbyterian University of East Africa\nTom Mboya University\nUmma University\nUnited States International University Africa\nUniversity of Eastern Africa, Baraton\nUniversity of Eldoret\nUniversity of Embu\nUniversity of Kabianga\nUniversity of Nairobi\nUzima University\nZetech University\nOther",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_glbo",
@@ -117,13 +128,15 @@
   {
    "fieldname": "section_break_hhzu",
    "fieldtype": "Section Break",
-   "label": "Solution Details"
+   "label": "Solution Details",
+   "read_only": 1
   },
   {
    "fieldname": "name_of_solution",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name of Solution",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -132,6 +145,7 @@
    "fieldtype": "Small Text",
    "label": "Brief Description",
    "max_height": "20 px",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -139,6 +153,7 @@
    "fieldtype": "Select",
    "label": "Thematic Area",
    "options": "\nDisaster Alert and Response\nAgricultural Optimization\nWater Resource Management",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -146,6 +161,7 @@
    "fieldtype": "Select",
    "label": "Application Method",
    "options": "Write-up and Video\nWrite-Up\nVideo",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -153,7 +169,8 @@
    "fieldname": "write_up",
    "fieldtype": "Text Editor",
    "label": "Write Up",
-   "mandatory_depends_on": "eval:doc.application_method != \"Video\";"
+   "mandatory_depends_on": "eval:doc.application_method != \"Video\";",
+   "read_only": 1
   },
   {
    "depends_on": "eval:doc.application_method != \"Write-Up\";",
@@ -161,7 +178,8 @@
    "fieldname": "video_link",
    "fieldtype": "Data",
    "label": "Video Link",
-   "mandatory_depends_on": "eval:doc.application_method != \"Write-Up\";"
+   "mandatory_depends_on": "eval:doc.application_method != \"Write-Up\";",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_priw",
@@ -183,21 +201,24 @@
    "fieldtype": "Table",
    "label": "Team Members",
    "mandatory_depends_on": "eval:doc.type_of_applicant == \"Group\";",
-   "options": "Hackathon Team Members"
+   "options": "Hackathon Team Members",
+   "read_only": 1
   },
   {
    "depends_on": "eval:doc.affiliation != \"University/College\";",
    "fieldname": "specify_affiliation",
    "fieldtype": "Data",
    "label": "Specify Affiliation",
-   "mandatory_depends_on": "eval:doc.affiliation != \"University/College\";"
+   "mandatory_depends_on": "eval:doc.affiliation != \"University/College\";",
+   "read_only": 1
   },
   {
    "depends_on": "eval:doc.university == \"Other\";",
    "fieldname": "specify_university",
    "fieldtype": "Data",
    "label": "Specify University/ College",
-   "mandatory_depends_on": "eval:doc.university == \"Other\";"
+   "mandatory_depends_on": "eval:doc.university == \"Other\";",
+   "read_only": 1
   },
   {
    "default": "1",
@@ -221,10 +242,9 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
-   "hidden": 1,
+   "in_list_view": 1,
    "label": "Status",
-   "options": "Round 1\nRound 2\nFinalist\nEliminated",
-   "read_only": 1
+   "options": "\nShortlisted\nEliminated"
   },
   {
    "fieldname": "column_break_trvt",
@@ -234,21 +254,27 @@
    "depends_on": "eval:doc.status != \"Final Round\";",
    "fieldname": "round_one_total_score",
    "fieldtype": "Int",
+   "hidden": 1,
    "label": "Round One Total Score",
+   "permlevel": 1,
    "read_only": 1
   },
   {
    "depends_on": "eval:doc.round_one_total_score != \"\";",
    "fieldname": "round_2_score",
    "fieldtype": "Int",
+   "hidden": 1,
    "label": "Round Two Total Score",
+   "permlevel": 1,
    "read_only": 1
   },
   {
    "depends_on": "eval:doc.round_two_total_score != \"\";",
    "fieldname": "final_round_total_score",
    "fieldtype": "Int",
+   "hidden": 1,
    "label": "Final Round Total Score",
+   "permlevel": 1,
    "read_only": 1
   },
   {
@@ -260,7 +286,8 @@
    "fieldname": "scores_round_one",
    "fieldtype": "Table",
    "label": "Scores Round One",
-   "options": "Hackathon Round Entry"
+   "options": "Hackathon Round Entry",
+   "permlevel": 1
   },
   {
    "fieldname": "section_break_esfb",
@@ -271,7 +298,8 @@
    "fieldname": "scores_round_two",
    "fieldtype": "Table",
    "label": "Scores Round Two",
-   "options": "Hackathon Round Entry"
+   "options": "Hackathon Round Entry",
+   "permlevel": 1
   },
   {
    "fieldname": "round_three_scores_section",
@@ -282,13 +310,27 @@
    "fieldname": "scores_round_three",
    "fieldtype": "Table",
    "label": "Scores Round Three",
-   "options": "Hackathon Round Entry"
+   "options": "Hackathon Round Entry",
+   "permlevel": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "DateTime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-08 07:12:44.545978",
+ "modified": "2025-10-04 09:55:37.564831",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Application",
@@ -320,13 +362,37 @@
    "write": 1
   },
   {
+   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Hackathon Judges",
-   "share": 1
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Hackathon Admins",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Hackathon Admins",
+   "share": 1,
+   "write": 1
   }
  ],
  "row_format": "Dynamic",
