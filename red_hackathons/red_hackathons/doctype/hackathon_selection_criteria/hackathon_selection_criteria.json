@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "field:judging_criteria",
  "creation": "2025-09-07 20:01:44.902375",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -23,7 +23,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Round",
-   "options": "\nRound 1\nRound 2\nFinal Round",
+   "options": "\nShortlisted (Round 1)\nRound 2\nFinal Round",
    "reqd": 1
   },
   {
@@ -32,7 +32,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Judging Criteria",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "description": "The max score to be awarded for this criteria",
@@ -47,10 +48,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-08 05:45:57.017468",
+ "modified": "2025-10-07 09:24:30.398941",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Selection Criteria",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -88,9 +90,11 @@
   }
  ],
  "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "judging_criteria",
  "track_changes": 1,
  "track_seen": 1
 }

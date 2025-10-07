@@ -244,17 +244,16 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nShortlisted\nEliminated"
+   "options": "\nShortlisted\nEliminated",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_trvt",
    "fieldtype": "Column Break"
   },
   {
-   "depends_on": "eval:doc.status != \"Final Round\";",
    "fieldname": "round_one_total_score",
    "fieldtype": "Int",
-   "hidden": 1,
    "label": "Round One Total Score",
    "permlevel": 1,
    "read_only": 1
@@ -292,11 +291,13 @@
   {
    "fieldname": "section_break_esfb",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Round Two Scores"
   },
   {
    "fieldname": "scores_round_two",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "Scores Round Two",
    "options": "Hackathon Round Entry",
    "permlevel": 1
@@ -304,6 +305,7 @@
   {
    "fieldname": "round_three_scores_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Round Three Scores"
   },
   {
@@ -324,13 +326,14 @@
   {
    "fieldname": "remarks",
    "fieldtype": "Small Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-04 09:55:37.564831",
+ "modified": "2025-10-07 09:22:33.836325",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Application",
@@ -391,6 +394,18 @@
    "read": 1,
    "report": 1,
    "role": "Hackathon Admins",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
    "share": 1,
    "write": 1
   }
