@@ -333,7 +333,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-07 09:22:33.836325",
+ "modified": "2025-10-07 17:36:58.822500",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Application",
@@ -406,6 +406,17 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Hackathon Judges",
    "share": 1,
    "write": 1
   }
