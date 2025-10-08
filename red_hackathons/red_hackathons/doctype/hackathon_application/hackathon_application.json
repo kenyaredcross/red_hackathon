@@ -285,8 +285,7 @@
    "fieldname": "scores_round_one",
    "fieldtype": "Table",
    "label": "Scores Round One",
-   "options": "Hackathon Round Entry",
-   "permlevel": 1
+   "options": "Hackathon Round Entry"
   },
   {
    "fieldname": "section_break_esfb",
@@ -333,7 +332,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-07 17:36:58.822500",
+ "modified": "2025-10-08 09:42:45.240417",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Application",

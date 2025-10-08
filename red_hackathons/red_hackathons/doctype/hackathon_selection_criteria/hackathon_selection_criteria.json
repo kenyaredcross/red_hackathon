@@ -48,7 +48,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-07 09:24:30.398941",
+ "modified": "2025-10-08 03:15:09.801962",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Selection Criteria",
@@ -89,6 +89,7 @@
    "share": 1
   }
  ],
+ "quick_entry": 1,
  "row_format": "Dynamic",
  "show_title_field_in_link": 1,
  "sort_field": "creation",
@@ -96,5 +97,6 @@
  "states": [],
  "title_field": "judging_criteria",
  "track_changes": 1,
- "track_seen": 1
+ "track_seen": 1,
+ "track_views": 1
 }
