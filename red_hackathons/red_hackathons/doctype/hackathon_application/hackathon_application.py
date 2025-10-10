@@ -6,4 +6,13 @@ from frappe.model.document import Document
 
 
 class HackathonApplication(Document):
-	pass
+	def validate(self):
+		total_score = 0
+		total_rows = len(self.scores_round_one or [])
+
+		if total_rows:
+			for row in self.scores_round_one:
+				total_score += row.score
+
+			
+		self.round_one_total_score = total_score
