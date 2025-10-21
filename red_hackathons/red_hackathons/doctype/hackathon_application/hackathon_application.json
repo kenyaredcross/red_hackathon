@@ -244,8 +244,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nShortlisted\nEliminated",
-   "read_only": 1
+   "options": "\nShortlisted\nEliminated\nRound 2"
   },
   {
    "fieldname": "column_break_trvt",
@@ -330,7 +329,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-17 19:58:48.685926",
+ "modified": "2025-10-21 08:45:56.801796",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Application",

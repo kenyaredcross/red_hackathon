@@ -10,6 +10,13 @@ frappe.ui.form.on("Hackathon Application", {
         calc_total_score(frm);
         
     },
+    onload(frm) {
+        if (frm.is_new) {
+            frm.add_custom_button ('Click Me', () => frappe.msgprint("Button Has been Clicked"));
+        }
+
+    }
+    
 
 });
 
