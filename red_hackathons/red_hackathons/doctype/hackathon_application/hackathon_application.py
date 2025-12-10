@@ -8,9 +8,10 @@ from frappe.model.document import Document
 class HackathonApplication(Document):
 	def validate(self):
 		self.calc_round_two()
+		self.calc_round_three()
 		
 
-	def calc_round_two():
+	def calc_round_two(self):
 		total_score = 0
 		total_rows = len(self.scores_round_one or [])
 
@@ -21,7 +22,7 @@ class HackathonApplication(Document):
 			
 		self.round_one_total_score = total_score
 	
-	def calc_round_three():
+	def calc_round_three(self):
 		total_score = 0
 		total_rows = len(self.scores_round_three or [])
 
