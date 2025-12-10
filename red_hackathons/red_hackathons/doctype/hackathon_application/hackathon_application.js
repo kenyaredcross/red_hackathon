@@ -33,6 +33,7 @@ frappe.ui.form.on("Hackathon Round Entry", {
 
 function calc_total_score(frm) {
     let total_score = 0;
+    let total_score_3 = 0;
     // Round ONE
 
     // Round TWO
@@ -40,7 +41,16 @@ function calc_total_score(frm) {
         total_score += row.score || 0;
     });
     frm.set_value('score_2', total_score);
+
+    // Final Round
+
+    (frm.doc.scores_final_round || []).forEach(row => {
+        total_score += row.score || 0;
+    })
+
+    frm.set_value('score_3', total_score_3);
 };
+
 
 function run_validations(frm, cdt, cdn) {
     // Check weight of score

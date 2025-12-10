@@ -43,7 +43,7 @@
   "section_break_esfb",
   "round_two",
   "round_three_scores_section",
-  "scores_round_three"
+  "scores_final_round"
  ],
  "fields": [
   {
@@ -244,7 +244,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nShortlisted\nEliminated\nRound 2"
+   "options": "\nShortlisted\nEliminated\nRound 2\nFinal Round"
   },
   {
    "fieldname": "column_break_trvt",
@@ -266,20 +266,13 @@
   {
    "fieldname": "section_break_esfb",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Round Two Scores"
   },
   {
    "fieldname": "round_three_scores_section",
    "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "Round Three Scores"
-  },
-  {
-   "fieldname": "scores_round_three",
-   "fieldtype": "Table",
-   "label": "Scores Round Three",
-   "options": "Hackathon Round Entry",
-   "permlevel": 1
+   "label": "Final Round Scores"
   },
   {
    "default": "Now",
@@ -298,6 +291,7 @@
   {
    "fieldname": "round_two",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "Scores Round Two",
    "options": "Hackathon Round Entry",
    "permlevel": 1
@@ -312,24 +306,31 @@
    "depends_on": "eval:doc.round_one_total_score != \"\";",
    "fieldname": "score_2",
    "fieldtype": "Int",
+   "hidden": 1,
    "label": "Round Two Total Score",
    "permlevel": 1,
    "read_only": 1
   },
   {
-   "depends_on": "eval:doc.round_two_total_score != \"\";",
+   "depends_on": "eval:doc.status ==\"Final Round\";",
    "fieldname": "score_3",
    "fieldtype": "Int",
-   "hidden": 1,
    "label": "Final Round Total Score",
    "permlevel": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "scores_final_round",
+   "fieldtype": "Table",
+   "label": "Scores Final Round",
+   "options": "Hackathon Round Entry",
+   "permlevel": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-21 08:45:56.801796",
+ "modified": "2025-12-10 07:06:59.994818",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Application",
