@@ -140,7 +140,7 @@
    "fieldname": "thematic_area",
    "fieldtype": "Select",
    "label": "Thematic Area",
-   "options": "\nDisaster Alert and Response\nAgricultural Optimization\nWater Resource Management",
+   "options": "\nAgricultural Optimization\nWater Resource Management",
    "reqd": 1
   },
   {
@@ -319,7 +319,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-24 07:47:06.794897",
+ "modified": "2026-08-24 07:49:43.140387",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Application",
