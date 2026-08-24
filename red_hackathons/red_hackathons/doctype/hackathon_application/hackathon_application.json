@@ -76,6 +76,7 @@
    "reqd": 1
   },
   {
+   "description": "We will mainly consider implementation within Counties in Lower Eastern Region (Nairobi, Kajiado, Machakos, Makueni, Kitui)",
    "fieldname": "county_located",
    "fieldtype": "Link",
    "label": "County Located",
@@ -319,7 +320,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-24 07:49:43.140387",
+ "modified": "2026-08-24 09:07:56.973117",
  "modified_by": "Administrator",
  "module": "Red Hackathons",
  "name": "Hackathon Application",
